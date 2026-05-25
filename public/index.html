@@ -11,35 +11,48 @@
     <div class="app-container">
         <nav class="sidebar">
             <div class="logo">☁️👻 Spookycloud</div>
-            <button class="nav-btn active">Feed</button>
-            <button class="nav-btn">Profile</button>
-            <button class="nav-btn">Settings</button>
+            <button class="nav-btn active" data-target="feed-page">Feed</button>
+            <button class="nav-btn" data-target="profile-page">Profile</button>
+            <button class="nav-btn" data-target="settings-page">Settings</button>
         </nav>
 
         <main class="content">
-            <header>
-                <h2>Story Feed</h2>
-            </header>
-
-            <section class="share-box">
-                <form action="/submit-story" method="POST">
-                    <textarea name="story" placeholder="Share a spooky story..." required></textarea>
-                    <button type="submit" class="submit-btn">Post to Cloud</button>
-                </form>
+            
+            <section id="feed-page" class="app-page">
+                <header><h2>Story Feed</h2></header>
+                <div class="share-box">
+                    <form action="/submit-story" method="POST">
+                        <textarea name="story" placeholder="Share a spooky story..." required></textarea>
+                        <button type="submit" class="submit-btn">Post to Cloud</button>
+                    </form>
+                </div>
+                <div class="feed">
+                    <div class="story-card">
+                        <h3>@huskycosmonaut</h3>
+                        <p>My code finally pushed to GitHub and it felt like magic. 🌌</p>
+                    </div>
+                </div>
             </section>
 
-            <section class="feed">
-                <div class="story-card">
+            <section id="profile-page" class="app-page hidden">
+                <header><h2>Your Profile</h2></header>
+                <div class="skeleton-card">
                     <h3>@huskycosmonaut</h3>
-                    <p>My code finally pushed to GitHub and it felt like magic. 🌌</p>
-                </div>
-                <div class="story-card">
-                    <h3>@ghost_coder</h3>
-                    <p>Left a bug in production and now the logs are haunting me.</p>
+                    <p>Profile information and your saved spooky stories will appear here soon...</p>
                 </div>
             </section>
+
+            <section id="settings-page" class="app-page hidden">
+                <header><h2>Settings & Safety Filters</h2></header>
+                <div class="skeleton-card">
+                    <h3>Content Preferences</h3>
+                    <p>Safety toggles, blocked word lists, and account configurations will go here...</p>
+                </div>
+            </section>
+
         </main>
     </div>
 
+    <script src="app.js"></script>
 </body>
 </html>

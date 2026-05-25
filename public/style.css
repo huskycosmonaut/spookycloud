@@ -8,62 +8,49 @@
 body {
     background-color: #0f0e17;
     color: #fffffe;
+    padding: 40px;
 }
 
 .app-container {
-    display: flex;
-    min-height: 100vh;
+    max-width: 600px;
+    margin: 0 auto;
 }
 
-/* Sidebar Styling */
-.sidebar {
-    width: 250px;
-    background-color: #16161a;
-    padding: 20px;
+/* Original Top Header & Navigation */
+header {
+    margin-bottom: 30px;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+    color: #fffffe;
+}
+
+.nav-menu {
     display: flex;
-    flex-direction: column;
     gap: 15px;
-    border-right: 1px solid #242629;
-}
-
-.logo {
-    font-size: 1.5rem;
-    font-weight: bold;
-    margin-bottom: 20px;
-    color: #ff8906;
+    margin-bottom: 25px;
+    border-bottom: 1px solid #242629;
+    padding-bottom: 15px;
 }
 
 .nav-btn {
     background: none;
     border: none;
     color: #a7a9be;
-    padding: 12px 15px;
-    text-align: left;
     font-size: 1.1rem;
+    font-weight: bold;
     cursor: pointer;
-    border-radius: 8px;
+    padding: 5px 10px;
     transition: 0.2s;
 }
 
 .nav-btn:hover, .nav-btn.active {
-    background-color: #ff8906;
-    color: #fffffe;
+    color: #ff8906;
 }
 
-/* Content Area Styling */
-.content {
-    flex: 1;
-    padding: 40px;
-    max-width: 800px;
-    margin: 0 auto;
-}
-
-header h2 {
-    margin-bottom: 30px;
-    font-size: 2rem;
-}
-
-/* Post Box */
+/* Original Post Box */
 .share-box {
     background-color: #16161a;
     padding: 20px;
@@ -104,7 +91,7 @@ textarea:focus {
     background-color: #e57a00;
 }
 
-/* Feed Cards */
+/* Original Feed Cards */
 .feed {
     display: flex;
     flex-direction: column;
@@ -127,4 +114,9 @@ textarea:focus {
 .story-card p {
     color: #fffffe;
     line-height: 1.5;
+}
+
+/* Utility to hide skeleton pages */
+.hidden {
+    display: none !important;
 }
