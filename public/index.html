@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spookycloud</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="app-container">
+        <nav class="sidebar">
+            <div class="logo">☁️👻 Spookycloud</div>
+            <button class="nav-btn active">Feed</button>
+            <button class="nav-btn">Profile</button>
+            <button class="nav-btn">Settings</button>
+        </nav>
+
+        <main class="content">
+            <header>
+                <h2>Story Feed</h2>
+            </header>
+
+            <section class="share-box">
+                <form action="/submit-story" method="POST">
+                    <textarea name="story" placeholder="Share a spooky story..." required></textarea>
+                    <button type="submit" class="submit-btn">Post to Cloud</button>
+                </form>
+            </section>
+
+            <section class="feed">
+                <div class="story-card">
+                    <h3>@huskycosmonaut</h3>
+                    <p>My code finally pushed to GitHub and it felt like magic. 🌌</p>
+                </div>
+                <div class="story-card">
+                    <h3>@ghost_coder</h3>
+                    <p>Left a bug in production and now the logs are haunting me.</p>
+                </div>
+            </section>
+        </main>
+    </div>
+
+</body>
+</html>

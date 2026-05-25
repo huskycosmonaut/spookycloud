@@ -6,26 +6,15 @@ const PORT = 3000;
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-// Home Route
-app.get('/', (req, res) => {
-    res.send('<h1>Spookycloud MVP is Alive! ☁️👻</h1><a href="/submit">Go to Submission Page</a>');
-});
+// Tell Express to serve HTML, CSS, and JS from the "public" folder
+app.use(express.static('public'));
 
-// NEW FEATURE: A submission page route
-app.get('/submit', (req, res) => {
-    res.send(`
-        <h1>Submit something spooky to the cloud... 👀</h1>
-        <form action="/data" method="POST">
-            <input type="text" name="spookyText" placeholder="Type here..." required />
-            <button type="submit">Send to Cloud</button>
-        </form>
-    `);
-});
-
-// NEW FEATURE: A route to receive and display the submitted data
-app.post('/data', (req, res) => {
-    const userText = req.body.spookyText;
-    res.send(`<h1>Spookycloud received your message! ☁️</h1><p>You said: "${userText}"</p><a href="/">Go Home</a>`);
+// API Route to handle story submissions from the feed
+app.post('/submit-story', (req, res) => {
+    const storyText = req.body.story;
+    console.log("New story received:", storyText);
+    // Right now it just sends you back to the app homepage
+    res.redirect('/');
 });
 
 app.listen(PORT, () => {
