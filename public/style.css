@@ -243,3 +243,106 @@ textarea:focus {
 .match-btn:hover {
     background-color: #e57a00;
 }
+/* Social Feed Additions */
+.story-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+.follow-btn {
+    background-color: transparent;
+    border: 1px solid #ff8906;
+    color: #ff8906;
+    padding: 3px 10px;
+    font-size: 0.75rem;
+    font-weight: bold;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.follow-btn.following {
+    background-color: #242629;
+    border-color: #242629;
+    color: #a7a9be;
+}
+
+.social-actions {
+    margin-top: 15px;
+    border-top: 1px solid #242629;
+    padding-top: 10px;
+}
+
+.like-btn {
+    background: none;
+    border: none;
+    color: #a7a9be;
+    font-size: 0.9rem;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.2s;
+}
+
+.like-btn.liked {
+    color: #ffdf6d; /* Golden ghost light glow when liked! */
+}
+
+/* Comments Box Inside Cards */
+.comments-section {
+    margin-top: 12px;
+    background-color: #0f0e17;
+    border-radius: 6px;
+    padding: 10px;
+}
+
+.comments-list {
+    font-size: 0.85rem;
+    margin-bottom: 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.comment-item {
+    color: #fffffe;
+}
+
+.comment-item strong {
+    color: #ff8906;
+}
+
+.comment-input-row {
+    display: flex;
+    gap: 8px;
+}
+
+.comment-input {
+    flex: 1;
+    background-color: #16161a;
+    border: 1px solid #242629;
+    border-radius: 4px;
+    color: #fffffe;
+    padding: 6px 10px;
+    font-size: 0.85rem;
+}
+
+.comment-input:focus {
+    outline: 1px solid #ff8906;
+}
+
+.send-comment-btn {
+    background-color: #242629;
+    color: #fffffe;
+    border: none;
+    padding: 0 12px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.send-comment-btn:hover {
+    background-color: #ff8906;
+}
