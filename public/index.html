@@ -7,7 +7,29 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+<div id="age-gate" class="overlay-container">
+    <div class="gate-card">
+        <div class="logo" style="font-size: 2rem;">🛑 18+ Verification</div>
+        <h2>Welcome to Spookycloud</h2>
+        <p class="gate-text">
+            You must be 18 years or older to enter this application. Please confirm your age using our secure verification placeholder.
+        </p>
 
+        <div class="verification-box">
+            <label class="setting-label" style="font-size: 0.9rem; text-align: left; margin-bottom: 8px;">
+                Simulated ID Upload (Demo Only)
+            </label>
+            <input type="file" id="id-upload-input" class="settings-input" accept="image/*">
+            <p class="setting-desc" style="max-width: 100%; margin-top: 5px; font-size: 0.75rem; color: #ff8906;">
+                ⚠️ Note: For safety, this demo does not upload or save files anywhere.
+            </p>
+        </div>
+
+        <button id="verify-submit-btn" class="submit-btn" style="width: 100%; padding: 12px; margin-top: 15px;">
+            Verify and Enter Cloud
+        </button>
+    </div>
+</div>
     <div class="app-container">
         
         <header>

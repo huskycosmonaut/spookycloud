@@ -19,3 +19,19 @@ navButtons.forEach(button => {
         targetPage.classList.remove('hidden');
     });
 });
+// Age Gate Placeholder Logic
+const ageGate = document.getElementById('age-gate');
+const verifyBtn = document.getElementById('verify-submit-btn');
+const idInput = document.getElementById('id-upload-input');
+
+verifyBtn.addEventListener('click', () => {
+    // In a production app, this would check the API signal.
+    // For this UI mockup, we confirm an option is selected.
+    if (idInput.files.length === 0) {
+        alert("Please select a sample mock image file to proceed with the UI demonstration.");
+        return;
+    }
+    
+    // Smoothly hide the verification screen
+    ageGate.classList.add('hidden');
+});
