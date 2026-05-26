@@ -9,48 +9,59 @@
 <body>
 
     <div class="app-container">
-        <nav class="sidebar">
-            <div class="logo">☁️👻 Spookycloud</div>
-            <button class="nav-btn active" data-target="feed-page">Feed</button>
-            <button class="nav-btn" data-target="profile-page">Profile</button>
-            <button class="nav-btn" data-target="settings-page">Settings</button>
-        </nav>
+        
+        <header>
+            <h1>☁️👻 Spookycloud</h1>
+            <div class="nav-menu">
+                <button class="nav-btn active" data-target="feed-page">Feed</button>
+                <button class="nav-btn" data-target="match-page">Match</button> <button class="nav-btn" data-target="profile-page">Profile</button>
+                <button class="nav-btn" data-target="settings-page">Settings</button>
+            </div>
+        </header>
 
-        <main class="content">
+        <section id="feed-page" class="app-page">
+            <div class="share-box">
+                <form action="/submit-story" method="POST">
+                    <textarea name="story" placeholder="Share a spooky story..." required></textarea>
+                    <button type="submit" class="submit-btn">Post to Cloud</button>
+                </form>
+            </div>
             
-            <section id="feed-page" class="app-page">
-                <header><h2>Story Feed</h2></header>
-                <div class="share-box">
-                    <form action="/submit-story" method="POST">
-                        <textarea name="story" placeholder="Share a spooky story..." required></textarea>
-                        <button type="submit" class="submit-btn">Post to Cloud</button>
-                    </form>
-                </div>
-                <div class="feed">
-                    <div class="story-card">
-                        <h3>@huskycosmonaut</h3>
-                        <p>My code finally pushed to GitHub and it felt like magic. 🌌</p>
-                    </div>
-                </div>
-            </section>
-
-            <section id="profile-page" class="app-page hidden">
-                <header><h2>Your Profile</h2></header>
-                <div class="skeleton-card">
+            <div class="feed">
+                <div class="story-card">
                     <h3>@huskycosmonaut</h3>
-                    <p>Profile information and your saved spooky stories will appear here soon...</p>
+                    <p>My code finally pushed to GitHub and it felt like magic. 🌌</p>
                 </div>
-            </section>
+            </div>
+        </section>
 
-            <section id="settings-page" class="app-page hidden">
-                <header><h2>Settings & Safety Filters</h2></header>
-                <div class="skeleton-card">
-                    <h3>Content Preferences</h3>
-                    <p>Safety toggles, blocked word lists, and account configurations will go here...</p>
+        <section id="match-page" class="app-page hidden">
+            <div class="match-card">
+                <div class="avatar-placeholder">👻</div>
+                <h2 class="match-username">@casper_the_coder</h2>
+                <p class="match-bio">Just a friendly ghost looking for a front-end buddy. Enjoys dark mode, alignment fixes, and haunting CSS files. 💻✨</p>
+                
+                <div class="match-actions">
+                    <button class="action-btn pass-btn">❌ Pass</button>
+                    <button class="action-btn item-btn match-btn">💜 Haunt</button>
                 </div>
-            </section>
+            </div>
+        </section>
 
-        </main>
+        <section id="profile-page" class="app-page hidden">
+            <div class="story-card">
+                <h3>@huskycosmonaut</h3>
+                <p>Your saved spooky stories and profile settings will load here soon...</p>
+            </div>
+        </section>
+
+        <section id="settings-page" class="app-page hidden">
+            <div class="story-card">
+                <h3>Safety Settings</h3>
+                <p>Custom profanity filters, word blocks, and toggle switches will appear here...</p>
+            </div>
+        </section>
+
     </div>
 
     <script src="app.js"></script>

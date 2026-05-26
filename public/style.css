@@ -120,3 +120,126 @@ textarea:focus {
 .hidden {
     display: none !important;
 }
+/* Settings Page Elements */
+.settings-group {
+    border-top: 1px solid #242629;
+    padding-top: 20px;
+}
+
+.settings-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.setting-label {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #fffffe;
+    display: block;
+}
+
+.setting-desc {
+    font-size: 0.85rem;
+    color: #a7a9be;
+    margin-top: 4px;
+    max-width: 80%;
+}
+
+/* Styled Inputs for Settings */
+.settings-input {
+    width: 100%;
+    background-color: #0f0e17;
+    border: 1px solid #242629;
+    border-radius: 6px;
+    color: #fffffe;
+    padding: 10px;
+    font-size: 0.95rem;
+}
+
+.settings-input:focus {
+    outline: 1px solid #ff8906;
+}
+
+/* Quick Toggle Checkbox Hack */
+.toggle-switch {
+    width: 40px;
+    height: 20px;
+    accent-color: #ff8906;
+    cursor: pointer;
+}
+/* Friend Matcher Card Styling */
+.match-card {
+    background-color: #16161a;
+    border: 1px solid #242629;
+    border-radius: 16px;
+    padding: 30px;
+    text-align: center;
+    max-width: 400px; /* Gives it a neat, distinct card size */
+}
+
+.avatar-placeholder {
+    font-size: 4rem;
+    background-color: #0f0e17;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px auto;
+    border: 1px solid #242629;
+}
+
+.match-username {
+    font-size: 1.5rem;
+    color: #fffffe;
+    margin-bottom: 10px;
+}
+
+.match-bio {
+    color: #a7a9be;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 25px;
+}
+
+/* Action Control Row */
+.match-actions {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.action-btn {
+    border: none;
+    padding: 12px 24px;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: transform 0.2s, background-color 0.2s;
+}
+
+.action-btn:active {
+    transform: scale(0.95);
+}
+
+.pass-btn {
+    background-color: #242629;
+    color: #fffffe;
+}
+
+.pass-btn:hover {
+    background-color: #32363a;
+}
+
+.match-btn {
+    background-color: #ff8906;
+    color: #fffffe;
+}
+
+.match-btn:hover {
+    background-color: #e57a00;
+}
